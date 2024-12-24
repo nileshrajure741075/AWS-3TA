@@ -3,7 +3,7 @@ ________________________________________________________________________________
 This project implements a Three-Tier Architecture using Amazon Web Services (AWS) to host and manage a web application. The architecture is designed for scalability, security, and fault tolerance by leveraging various AWS services like EC2, VPC, RDS, CloudWatch, and SNS. The solution separates the web, application, and database layers, ensuring secure and streamlined operations.
 
 🖼️ Architecture Overview
-
+____________________________________________________________________________________________________________
 The system is divided into three main tiers:
 1.	Web Tier (Presentation Layer): 
 o	EC2 instances are hosted in public subnets to handle incoming HTTP/HTTPS requests.
@@ -24,7 +24,7 @@ Key Components:
 •	SNS for real-time notifications
 
 🌟 Features
-
+____________________________________________________________________________________________________________
 •	High Availability: EC2 instances are distributed across multiple Availability Zones (AZs) to ensure fault tolerance.
 •	Network Isolation: Using public and private subnets, the architecture isolates web servers from backend services for enhanced security.
 •	Scalability: Each tier can scale independently based on demand, ensuring that the architecture can handle growing workloads.
@@ -32,7 +32,7 @@ Key Components:
 •	Security: The database is hosted in private subnets, and communication between components is controlled through Security Groups and Network ACLs.
 
 🚀 Deployment Workflow
-
+____________________________________________________________________________________________________________
 1.	Custom VPC Creation:
 o	Define a VPC with a CIDR block of 10.0.0.0/16.
 o	Create public and private subnets in three different AZs for redundancy.
@@ -49,7 +49,7 @@ o	Enable CloudWatch to track resource metrics (CPU, memory, etc.) and set up ala
 o	SNS integration to notify users when alarms are triggered.
 
 🛠️ AWS Services Used
-
+____________________________________________________________________________________________________________
 •	EC2 (Elastic Compute Cloud): For deploying the web and app servers.
 •	RDS (Relational Database Service): To host the database in a private subnet.
 •	VPC (Virtual Private Cloud): Custom VPC to manage network isolation and routing.
@@ -60,7 +60,7 @@ o	SNS integration to notify users when alarms are triggered.
 •	SNS (Simple Notification Service): For sending real-time notifications when CloudWatch alarms are triggered.
 
 📈 Benefits of this Architecture
-
+____________________________________________________________________________________________________________
 •	Scalability: Each tier can independently scale up or down based on demand, improving resource utilization and cost management.
 •	Security: Network isolation using private subnets keeps sensitive resources like databases hidden from the public internet.
 •	Fault Tolerance: Distributing instances across multiple AZs ensures the system remains operational even if one AZ fails.
@@ -68,18 +68,18 @@ o	SNS integration to notify users when alarms are triggered.
 •	Simplified Management: With dedicated layers for web, application, and database, each layer can be managed and optimized separately.
 
 🛠️ Potential Improvements
-
+____________________________________________________________________________________________________________
 •	Auto Scaling: Add Auto Scaling Groups to automatically adjust the number of EC2 instances based on traffic patterns.
 •	Elastic Load Balancing (ELB): Introduce a load balancer to distribute incoming traffic evenly across multiple EC2 instances in the web tier.
 •	Caching: Use Elasticache for caching frequently accessed data to enhance app performance.
 
 📧 Notifications and Monitoring
-
+____________________________________________________________________________________________________________
 Integrated CloudWatch Alarms and SNS ensure that administrators are notified of potential issues before they impact performance. For example, an alarm can be triggered when:
 •	CPU utilization crosses a specific threshold
 •	RDS storage reaches a certain capacity
 •	Network traffic exceeds normal levels
 
 📝 Conclusion
-
+____________________________________________________________________________________________________________
 This project demonstrates a scalable and secure Three-Tier Architecture on AWS, designed for high availability and performance. The use of a custom VPC, proper subnetting, and AWS-managed services like RDS and CloudWatch ensures a reliable, maintainable, and fault-tolerant infrastructure.
