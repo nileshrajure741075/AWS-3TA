@@ -13,7 +13,7 @@ The system is divided into three main tiers:
 
     o	EC2 instances in private subnets run the backend logic.
 
-**3.	Database Tier: **
+3.	Database Tier: 
 
     o	Amazon RDS is deployed in private subnets to securely store persistent data.
 
@@ -44,7 +44,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 1.	Custom VPC Creation:
 
-      o	Define a VPC with a CIDR block of 10.0.0.0/16.
+      o	Define a VPC with a CIDR block of **10.0.0.0/16.**
 
       o	Create public and private subnets in three different AZs for redundancy.
 
