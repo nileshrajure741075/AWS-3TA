@@ -7,15 +7,15 @@ ________________________________________________________________________________
 The system is divided into three main tiers:
 1.	Web Tier (Presentation Layer):
 
-  o	EC2 instances are hosted in public subnets to handle incoming HTTP/HTTPS requests.
+    o	EC2 instances are hosted in public subnets to handle incoming HTTP/HTTPS requests.
 
 2.	Application Tier (Logic Layer):
 
-  o	EC2 instances in private subnets run the backend logic.
+    o	EC2 instances in private subnets run the backend logic.
 
 3.	Database Tier: 
 
-  o	Amazon RDS is deployed in private subnets to securely store persistent data.
+    o	Amazon RDS is deployed in private subnets to securely store persistent data.
 
 Key Components:
 
