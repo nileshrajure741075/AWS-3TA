@@ -21,12 +21,19 @@ The system is divided into three main tiers:
 ### Key Components:
 
 •	**VPC** with custom CIDR blocks
+
 •	**Public & Private Subnets** in multiple AZs
+
 •	**EC2 Instances** for web and app servers
+
 •	**Internet Gateway** for public subnet internet access
+
 •	**NAT Gateway** for private subnet internet access
+
 •	**RDS** for database management
+
 •	**CloudWatch** for monitoring and alerts
+
 •	**SNS** for real-time notifications
 
 ## 🌟 Features
