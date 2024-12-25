@@ -4,7 +4,7 @@ This project implements a **Three-Tier Architecture** using **Amazon Web Service
 
 ## 🖼️ Architecture Overview
 ____________________________________________________________________________________________________________
-The system is divided into three main tiers:
+**The system is divided into three main tiers**:
 
 1.	**Web Tier (Presentation Layer)**:
 
