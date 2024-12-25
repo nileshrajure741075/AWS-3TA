@@ -44,7 +44,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 1.	Custom VPC Creation:
 
-      o	Define a VPC with a CIDR block of **10.0.0.0/16.**
+      o	**Define a VPC with a CIDR block of** **10.0.0.0/16.**
 
       o	Create public and private subnets in three different AZs for redundancy.
 
