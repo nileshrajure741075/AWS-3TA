@@ -1,4 +1,4 @@
-🏗️ AWS Three-Tier Architecture Deployment
++ #🏗️ AWS Three-Tier Architecture Deployment
 ________________________________________________________________________________________________
 This project implements a Three-Tier Architecture using Amazon Web Services (AWS) to host and manage a web application. The architecture is designed for scalability, security, and fault tolerance by leveraging various AWS services like EC2, VPC, RDS, CloudWatch, and SNS. The solution separates the web, application, and database layers, ensuring secure and streamlined operations.
 
@@ -44,7 +44,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 1.	Custom VPC Creation:
 
-      o	**Define a VPC with a CIDR block of** **10.0.0.0/16.**
+      o	Define a VPC with a CIDR block of 10.0.0.0/16.
 
       o	Create public and private subnets in three different AZs for redundancy.
 
