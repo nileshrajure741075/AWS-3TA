@@ -14,7 +14,7 @@ The system is divided into three main tiers:
 
     o	EC2 instances in private subnets run the backend logic.
 
-3. **Database Tier**
+3. **Database Tier**:
 
     o	Amazon RDS is deployed in private subnets to securely store persistent data.
 
