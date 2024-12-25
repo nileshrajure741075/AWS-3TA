@@ -5,11 +5,16 @@ This project implements a Three-Tier Architecture using Amazon Web Services (AWS
 🖼️ Architecture Overview
 ____________________________________________________________________________________________________________
 The system is divided into three main tiers:
-1.	Web Tier (Presentation Layer): 
+1.	Web Tier (Presentation Layer):
+
 o	EC2 instances are hosted in public subnets to handle incoming HTTP/HTTPS requests.
-2.	Application Tier (Logic Layer): 
+
+2.	Application Tier (Logic Layer):
+
 o	EC2 instances in private subnets run the backend logic.
+
 3.	Database Tier: 
+
 o	Amazon RDS is deployed in private subnets to securely store persistent data.
 
 Key Components:
@@ -26,26 +31,43 @@ Key Components:
 🌟 Features
 ____________________________________________________________________________________________________________
 •	High Availability: EC2 instances are distributed across multiple Availability Zones (AZs) to ensure fault tolerance.
+
 •	Network Isolation: Using public and private subnets, the architecture isolates web servers from backend services for enhanced security.
+
 •	Scalability: Each tier can scale independently based on demand, ensuring that the architecture can handle growing workloads.
+
 •	Monitoring and Alerts: Integrated CloudWatch for real-time performance monitoring with SNS notifications for key system events.
+
 •	Security: The database is hosted in private subnets, and communication between components is controlled through Security Groups and Network ACLs.
 
 🚀 Deployment Workflow
 ____________________________________________________________________________________________________________
 1.	Custom VPC Creation:
+
 o	Define a VPC with a CIDR block of 10.0.0.0/16.
+
 o	Create public and private subnets in three different AZs for redundancy.
+
 2.	Setup of Internet and NAT Gateways:
+
 o	Attach an Internet Gateway to the VPC to allow internet access to public instances.
+
 o	Deploy a NAT Gateway in the public subnet to allow private instances to access the internet without exposing them directly.
+
 3.	EC2 Instances Deployment:
+
 o	Web Tier: Deploy EC2 instances in the public subnets to handle incoming traffic.
+
 o	App Tier: Host backend EC2 instances in the private subnet, which are only accessible internally.
+
 4.	Database Setup with Amazon RDS:
+
 o	Use Amazon RDS for a fully managed relational database (e.g., MySQL/PostgreSQL) in the private subnet to store persistent data.
+
 5.	Monitoring and Alarms:
+
 o	Enable CloudWatch to track resource metrics (CPU, memory, etc.) and set up alarms for specific thresholds.
+
 o	SNS integration to notify users when alarms are triggered.
 
 🛠️ AWS Services Used
@@ -69,15 +91,22 @@ ________________________________________________________________________________
 📈 Benefits of this Architecture
 ____________________________________________________________________________________________________________
 •	Scalability: Each tier can independently scale up or down based on demand, improving resource utilization and cost management.
+
 •	Security: Network isolation using private subnets keeps sensitive resources like databases hidden from the public internet.
+
 •	Fault Tolerance: Distributing instances across multiple AZs ensures the system remains operational even if one AZ fails.
+
 •	Monitoring and Alerts: Real-time performance monitoring through CloudWatch and automated alerts via SNS improve system observability and response times.
+
 •	Simplified Management: With dedicated layers for web, application, and database, each layer can be managed and optimized separately.
 
 🛠️ Potential Improvements
 ____________________________________________________________________________________________________________
+
 •	Auto Scaling: Add Auto Scaling Groups to automatically adjust the number of EC2 instances based on traffic patterns.
+
 •	Elastic Load Balancing (ELB): Introduce a load balancer to distribute incoming traffic evenly across multiple EC2 instances in the web tier.
+
 •	Caching: Use Elasticache for caching frequently accessed data to enhance app performance.
 
 📧 Notifications and Monitoring
