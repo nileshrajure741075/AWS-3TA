@@ -112,8 +112,11 @@ This project implements a **Three-Tier Architecture** using **Amazon Web Service
 
 ## 📧 Notifications and Monitoring
 Integrated **CloudWatch** Alarms and **SNS** ensure that administrators are notified of potential issues before they impact performance. For example, an alarm can be triggered when:
+
 •	CPU utilization crosses a specific threshold
+
 •	RDS storage reaches a certain capacity
+
 •	Network traffic exceeds normal levels
 
 ## 📝 Conclusion
