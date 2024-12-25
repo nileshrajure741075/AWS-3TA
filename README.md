@@ -51,12 +51,19 @@ o	SNS integration to notify users when alarms are triggered.
 🛠️ AWS Services Used
 ____________________________________________________________________________________________________________
 •	EC2 (Elastic Compute Cloud): For deploying the web and app servers.
+
 •	RDS (Relational Database Service): To host the database in a private subnet.
+
 •	VPC (Virtual Private Cloud): Custom VPC to manage network isolation and routing.
+
 •	Subnets: Public and private subnets to separate tiers.
+
 •	Internet Gateway: To allow the web tier to access the internet.
+
 •	NAT Gateway: For enabling private subnets to access external resources securely.
+
 •	CloudWatch: For monitoring system performance.
+
 •	SNS (Simple Notification Service): For sending real-time notifications when CloudWatch alarms are triggered.
 
 📈 Benefits of this Architecture
