@@ -1,6 +1,6 @@
  # 🏗️ AWS Three-Tier Architecture Deployment
 ________________________________________________________________________________________________
-+ This project implements a **Three-Tier Architecture** using **Amazon Web Services (AWS**) to host and manage a web application. The architecture is designed for scalability, security, and fault tolerance by leveraging various AWS services like **EC2**, **VPC**, **RDS**, **CloudWatch**, and **SNS**. The solution separates the web, application, and database layers, ensuring secure and streamlined operations.
+This project implements a **Three-Tier Architecture** using **Amazon Web Services (AWS**) to host and manage a web application. The architecture is designed for scalability, security, and fault tolerance by leveraging various AWS services like **EC2**, **VPC**, **RDS**, **CloudWatch**, and **SNS**. The solution separates the web, application, and database layers, ensuring secure and streamlined operations.
 
 ## 🖼️ Architecture Overview
 ____________________________________________________________________________________________________________
