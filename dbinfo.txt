@@ -1,0 +1,7 @@
+after entering in mysql use following commands for create db and table
+
+create db :
+create database dbname;
+
+create table :
+create table users (id int not null auto_increment primary key, name varchar (30), email varchar (50), website varchar (20), comment varchar (50), gender varchar (10));

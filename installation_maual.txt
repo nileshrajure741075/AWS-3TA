@@ -1,0 +1,55 @@
+Steps :
+
+
+For Web Tier :
+
+ Launch an EC2 instance in public subnet.
+ Install Nginx/apache server in instance.(check status and enable web server.)
+ Create html page in nginx path.
+ Change configuration file 
+ Reload Nginx server.
+ Open port 80.
+ Hit your public ip in any browser.
+ Nginx html path -> cd /var/www/html
+ Nginx configuration file path -> cd /etc/nginx/sites-enabled/default
+
+For App Tier :
+
+ Launch EC2 instance in private subnet
+ Install php in instance.
+ Install Nginx/apache server in instance.(check status and enable web server.)
+ Create php page in nginx path.
+ Open port 80 , 9000 and 3306.
+ Nginx configuration file path -> cd /etc/nginx/sites-enabled/default
+
+For DB Tier :
+
+ Launch EC2 instance in private subnet
+ Install mariadb in instance.
+ Create database.
+ Create table.
+ Set password to Mysql.
+ Create new user in database.
+ Grant all priviliges database to new user.
+ Flush priviliges.
+ Change Mysql configuration file.
+ Mysql configuration path -> cd /etc/mysql/mariadb.conf.d/50-server.cnf
+
+How To Create User and Grant Privileges Database To New User :
+
+ CREATE USER 'username'@'app-tier-pvt-ip' IDENTIFIED BY 'password';
+ GRANT ALL PRIVILEGES ON *.* TO 'usename'@'app-tier-pvt-ip’;
+ FLUSH PRIVILEGES;
+
+How To Set Password to MySQL :
+ALTER USER 'username'@'localhost' IDENTIFIED BY 'password';
+
+connect RDS
+sudo mysql -u username -p -h database-endpoint.region.rds.amazonaws.com
+
+connect ec2 (if your database in ec2)
+sudo mysql -u username -p
+
+
+You can also enable monitering and set alarms like CPUutilization and many more using CloudWatch and
+create subscription for SNS service.
