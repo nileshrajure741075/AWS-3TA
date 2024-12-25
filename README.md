@@ -44,31 +44,31 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________
 1.	Custom VPC Creation:
 
-  o	Define a VPC with a CIDR block of 10.0.0.0/16.
+      o	Define a VPC with a CIDR block of 10.0.0.0/16.
 
-  o	Create public and private subnets in three different AZs for redundancy.
+      o	Create public and private subnets in three different AZs for redundancy.
 
 2.	Setup of Internet and NAT Gateways:
 
-  o Attach an Internet Gateway to the VPC to allow internet access to public instances.
+      o Attach an Internet Gateway to the VPC to allow internet access to public instances.
 
-  o	Deploy a NAT Gateway in the public subnet to allow private instances to access the internet without exposing them directly.
+      o	Deploy a NAT Gateway in the public subnet to allow private instances to access the internet without exposing them directly.
 
 3.	EC2 Instances Deployment:
 
-  o	Web Tier: Deploy EC2 instances in the public subnets to handle incoming traffic.
+      o	Web Tier: Deploy EC2 instances in the public subnets to handle incoming traffic.
 
-  o	App Tier: Host backend EC2 instances in the private subnet, which are only accessible internally.
+      o	App Tier: Host backend EC2 instances in the private subnet, which are only accessible internally.
 
 4.	Database Setup with Amazon RDS:
 
-  o	Use Amazon RDS for a fully managed relational database (e.g., MySQL/PostgreSQL) in the private subnet to store persistent data.
+      o	Use Amazon RDS for a fully managed relational database (e.g., MySQL/PostgreSQL) in the private subnet to store persistent data.
 
 5.	Monitoring and Alarms:
 
-  o	Enable CloudWatch to track resource metrics (CPU, memory, etc.) and set up alarms for specific thresholds.
+      o	Enable CloudWatch to track resource metrics (CPU, memory, etc.) and set up alarms for specific thresholds.
 
-  o	SNS integration to notify users when alarms are triggered.
+      o	SNS integration to notify users when alarms are triggered.
 
 🛠️ AWS Services Used
 ____________________________________________________________________________________________________________
